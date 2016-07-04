@@ -1,10 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<ion-content>
+  <form>
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input type="number" ng-model = "firstNum">
+    </label>
+    <label class="item item-input">
+      <input type="number" ng-model = "sign">
+    </label>
+    <label class="item item-input" >
+      <input type="number" ng-model="secondNum">
+    </label>
+  </div>
+    <div>
+      {{result}}
+    </div>
+    <button ng-click="calculate">
+      Calculate
+    </button>
+  </form>
+</ion-content>
