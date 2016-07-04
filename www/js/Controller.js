@@ -1,6 +1,8 @@
 angular.module('Calculator',[])
-.controller('mainCtrl',function($scope){
-
+.controller('mainCtrl',function($scope, $state){
+  $scope.calculatePage = function () {
+    $state.go('calculatePage')
+};
 })
 .controller('calculatePageCtrl',function($scope){
 

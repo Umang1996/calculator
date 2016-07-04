@@ -34,6 +34,6 @@ angular.module('starter', ['ionic','Calculator'])
         templateUrl:'templates/calculatePage.html',
         controller:'calculatePageCtrl'
       });
-    $urlRouterProvider.otherwise('calculatePage')
+    $urlRouterProvider.otherwise('start')
   })
 
