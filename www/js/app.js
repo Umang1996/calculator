@@ -21,18 +21,19 @@ angular.module('starter', ['ionic','Calculator'])
       StatusBar.styleDefault();
     }
   })
-  .config(function($stateProvider,$urlRouterProvider){
+})
+    .config(function($stateProvider,$urlRouterProvider){
     $stateProvider
       .state('start',{
         url:'/start',
-        templateUrl:'/templates/start.html',
+        templateUrl:'templates/start.html',
         controller:'mainCtrl'
       })
       .state('calculatePage',{
         url:'/calculatePage',
-        templatesUrl:'/templates/calculatePage.html',
+        templateUrl:'templates/calculatePage.html',
         controller:'calculatePageCtrl'
       });
-    $urlRouterProvider.otherwise('start')
+    $urlRouterProvider.otherwise('calculatePage')
   })
-});
+
