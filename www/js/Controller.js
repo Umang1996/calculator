@@ -1,11 +1,10 @@
-angular.module('Calculator', [])
-  .controller('mainCtrl', function ($scope, $state) {
-    $scope.calculatePage = function () {
-      $state.go('calculatePage')
-    };
-  })
-
-  .controller('calculatePageCtrl', function ($scope) {
+angular.module('Calculator',[])
+.controller('mainCtrl',function($scope, $state){
+  $scope.calculatePage = function () {
+    $state.go('calculatePage')
+};
+})
+.controller('calculatePageCtrl',function($scope){
 
   $scope.data = {
     first:'',
@@ -19,18 +18,20 @@ angular.module('Calculator', [])
         console.log($scope.data.result)
       }
       else if ($scope.sign == '-') {
-        $scope.result = $scope.data.first - $scope.data.second;
-        return $scope.result;
+        $scope.data.result = $scope.data.first - $scope.data.second;
+        return $scope.data.result;
       }
       else if ($scope.sign == '*') {
-        $scope.result = $scope.data.first * $scope.data.second;
-        return $scope.result;
+        $scope.data.result = $scope.data.first * $scope.data.second;
+        return $scope.data.result;
       }
       else if ($scope.sign == '/') {
-        $scope.result = $scope.data.first / $scope.data.second;
-        return $scope.result;
+        $scope.data.result = $scope.data.first / $scope.data.second;
+        return $scope.data.result;
       }
-
+      if ($scope.data.second=='0' && $scope.data.sign=='/'){
+        alert("На ноль делить нельзя");
+      }
     }
 
 })
